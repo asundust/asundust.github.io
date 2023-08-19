@@ -3312,13 +3312,10 @@ body {
     overflow: hidden;
     height: 100%;
     font-size: 100%;
-    /*background-size:cover;
-    background: url(../img/background.jpg) no-repeat;
-    background-attachment: fixed;*/
-    background: -webkit-linear-gradient(315deg, #00C4FF, #9D1BB2) no-repeat fixed;
+    /*background-size: cover;*/
+    /*background: url(img/background.jpg) no-repeat fixed center top;*/
     background: linear-gradient(135deg, #00C4FF, #9D1BB2) no-repeat fixed;
-    overflow: hidden;
-    font-family: 'Helvetica Neue', 'Microsoft Yahei', SimHei, sans-serif
+    font-family: 'Helvetica Neue', 'Microsoft Yahei', SimHei, sans-serif;
 }
 
 #wrap {
@@ -3799,54 +3796,58 @@ ul li a strong {
 @media screen and (min-width: 1200px) {
     #wrap {
         width: 1024px;
-        height: 900px
+        height: 100vh;
     }
 }
 
 @media screen and (min-width: 960px) and (max-width: 1199px) {
     #wrap {
-        width: 1024px
+        width: 1000px;
+        height: 100vh;
     }
 }
 
 @media screen and (min-width: 768px) and (max-width: 959px) {
     #wrap {
-        width: 750px
+        width: 670px;
+        height: 100vh;
     }
 }
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-    .app ul li a img {
-        width: 96px;
-        height: 96px
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    #wrap {
+        width: 550px;
+        height: 100vh;
     }
 
-    div ul li a, div ul li a strong, ul li {
-        display: block;
-        width: 96px
-    }
-}
-
-@media only screen and (max-width: 479px) {
-    .t op {
+    #top {
         position: relative;
         top: 50px;
         left: 0;
         text-align: center
     }
 
+    .app ul:first-child {
+        margin-top: 50px;
+    }
+
+    .app ul li a {
+        width: 141px;
+        height: 141px;
+    }
+
     .app ul li a img {
-        width: 64px;
-        height: 64px
+        width: 96px;
+        height: 96px
     }
 
     div ul li a, ul li {
         display: block;
-        width: 64px
+        width: 96px;
     }
 
     div ul li a strong {
-        width: 70px
+        width: 141px;
     }
 
     ul li {
@@ -3856,6 +3857,81 @@ ul li a strong {
     }
 }
 
+@media only screen and (min-width: 350px) and (max-width: 479px) {
+    #wrap {
+        height: 100vh;
+    }
+
+    #top {
+        position: relative;
+        top: 50px;
+        left: 0;
+        text-align: center
+    }
+
+    .app ul:first-child {
+        margin-top: 50px;
+    }
+
+    .app ul li {
+        display: flex;
+        margin: 0 0 0 0;
+    }
+
+    .app ul li a {
+        width: 141px;
+        height: 141px;
+    }
+
+    .app ul li a img {
+        width: 64px;
+        height: 64px;
+    }
+
+    div ul li a, ul li {
+        display: block;
+        width: 64px;
+    }
+
+    div ul li a strong {
+        width: 96px;
+    }
+
+    ul li {
+        list-style-type: none;
+        float: left;
+        margin: 0 0 15px 25px
+    }
+
+    #footer {
+        height: unset;
+    }
+
+    .footer-contents {
+        position: unset;
+    }
+
+    .footer-contents .links .line {
+        margin-top: 20px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media only screen and (min-width: 350px) and (max-width: 479px) {
+    div ul li {
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 349px) {
+    div ul li {
+        width: 33.33%;
+    }
+    body {
+        overflow: auto;
+    }
+}
 
 .text-js {
     opacity: 0;
